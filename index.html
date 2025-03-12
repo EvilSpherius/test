@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> MY BEATIFUL WEB PAGE </title>
+    <link rel="icon" href="EvilSpherius1.png">
+
+    <style>
+        .bodyStuff{
+            background-color: black;
+        }
+
+        .stuff{
+            display: flex;
+            background-image: url('Квадрос.jpg');
+            background-repeat:repeat-x;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            filter: saturate(100%); filter:contrast(200%);
+
+            justify-content: center;  
+        }
+
+        .text{
+
+            text-align: center;
+            color: red;
+            filter:blur(1px);
+            font-size: larger;
+        }
+
+        .bg{
+            background-image: url('Сфєра.jpg');
+            width: 110px; height: 70px ;
+            background-size: 100% 100%;
+            background-repeat:repeat;
+            justify-self:right;
+        }
+
+        .gasterRef{
+            width: 100px;
+            height: 100px;
+            filter: opacity(0%);
+            animation-name: disap;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+        }
+
+        @keyframes disap{
+            from {filter: opacity(100%);}
+            to {filter: opacity(0%);}
+        }
+    </style>
+</head>
+    <body class="bodyStuff">    <!--ПАРОЛЬ: EvilSpherius-->
+
+     <h1 class ="stuff">
+        <button onclick="buttonFuck()"> 
+            <a href="a.html" target="_blank" style="cursor: not-allowed;" onclick="audioPlay(); setTimeout(alertPassword, 500)" onmouseover="audioPlay()">
+            <img src="a button.jpg" alt='BUTTON' style="width: 150px; ;height: 50px;"></a> 
+        </button>
+    </h1>
+    <p class="text" id="textFound"> <b>ЗНАЙДІТЬ ПАРОЛЬ</b> </p>
+
+    <div id = "gasterRef">
+
+        
+    </div>
+
+    <div class="bg"> 
+    </div>
+
+     <script>
+        let isAudioPlaying = false;
+
+        function audioPlay(){
+            let audio = new Audio("gaster-vanish.mp3");
+
+            if (isAudioPlaying == false){
+            setTimeout(audioPlay, 10000); //ЧОМУ ЦЕ НЕ ПРАЦЮЄ АВЛІВВІЛДОАДЛВОІДАЛОВЛДС
+            audio.play();
+            document.getElementById('gasterRef').innerHTML = '<img class="gasterRef" src="EvilSpherius2.png">';
+            isAudioPlaying = true;
+            } else {
+                isAudioPlaying = false;
+            } 
+        }
+
+
+        function alertPassword() {
+            alert('✋︎☠︎ 💧︎⚐︎🕆︎☼︎👍︎☜︎');
+            document.getElementById('textFound').innerHTML = "ЗНАЙДІТЬ ПАРОЛЬ";
+            let audio2 = new Audio("I STOLE THIS AUDIO FROM SPHERIUS.mp3");
+            audio2.play();
+            }
+        
+        function buttonFuck(){
+            document.getElementById('textFound').innerHTML = "НАТИСНИ НА ЦЕНТР КНІПКИ";
+        }
+     </script>
+    </body>
+</html>
